@@ -9,7 +9,8 @@ This is the very beginning of the project and I will be adding more contents dur
 to your contributions, feel free to submit a PR. 
 
 ## How to submit a PR? 
-- Fork a repo, If you are new more details can be found [here](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
+- Fork a repo, If you are new more details can be found [here.](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
+- Add user settings specifics to your IDE at the bottom of gitignore if your IDE is not listed there. You can find templates for your IDE [here.](https://github.com/github/gitignore)
 - Create a branch with initials of your name then a feature you are contributing eg: `mc-geometric-sum`.
 - If your sample code  is in Swift language then add your contents direct to the `README.md` file located in the root folder with title, explanations,
 sample implementation code and sample unit tests to verify your implementations and the performance of your algorithms. Include Swift playground
