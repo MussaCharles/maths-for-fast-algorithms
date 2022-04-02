@@ -138,7 +138,8 @@ final class ArithmeticSequenceTests: XCTestCase {
 
 let testObserver = TestObserver()
 XCTestObservationCenter.shared.addTestObserver(testObserver)
-ArithmeticSequenceTests.defaultTestSuite.run()
+ArithmeticSequenceSpeedMeasurementsTests.defaultTestSuite.run()
+//ArithmeticSequenceTests.defaultTestSuite.run()
 
 
 // MARK: - Sample Outputs
