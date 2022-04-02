@@ -18,6 +18,7 @@ with unit tested code. Please refer to the current [ArithmeticSequence](Arithmet
   written in Python for ArithmeticSum file names should be `PythonArithmeticSum.md`, `PythonArithmeticSum.py` etc and for Javascript `JavascriptArithemeticSum.md`,
   `JavascriptArithemeticSum.js` etc. If you can please include unit tests too using the language of your choice.
 - To fix typos or any issues on code samples simple edit the relevant file, make some changes then make a PR. 
+- To suggest ideas for things like files organization etc. please create an issue or start a discussion. 
 
 
 
