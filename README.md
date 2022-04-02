@@ -69,7 +69,7 @@ A swift implementation for arithmetic sum using Gauss's technic is as follows.
 /// `Time Complexity` => O(1)
 ///
 /// - Parameters:
-///   - a1: he first term of the series
+///   - a1: The first term of the series
 ///   - n: Position of the last term `(nth Term)` in a given series.
 ///   - d: A constant difference between two consecutive terms.
 /// - Returns: Total sum from the first to the last term.
