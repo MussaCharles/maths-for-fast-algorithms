@@ -74,7 +74,7 @@ import Foundation
 import XCTest
 
 
-final class ArithmeticSequenceTests: XCTestCase {
+final class ArithmeticSequenceImplementationTests: XCTestCase {
 
     var conditionToSumFromOneToFiveWithDifferenceOfTwo: SumConditions!
     var conditionToSumFromOneTo100WithDifferenceOfOne: SumConditions!
