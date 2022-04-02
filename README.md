@@ -28,18 +28,22 @@ This approach will given us `O(n)` run time.
 Swift sample code for this approach is as follows: 
 
 ```swift
-public func computeSumOfNaturalNumbersUsingNaiveApproach(firstTerm A1: Int, nthTerm n: Int, commonDifference d: Int) -> Int {
-    var allTerms: [Int] = []
-    var currentTerm: Int = A1
-    for _ in 1...n {
-        allTerms.append(currentTerm)
-        currentTerm += d
-    }
-    var sum:Int = 0
-    for term in allTerms {
-        sum += term
-    }
-    return sum
+public func computeSumOfNaturalNumbersUsingNaiveApproach(
+firstTerm A1: Int,
+ nthTerm n: Int,
+  commonDifference d: Int
+) -> Int {
+var allTerms: [Int] = []
+var currentTerm: Int = A1
+for _ in 1...n {
+allTerms.append(currentTerm)
+currentTerm += d
+}
+var sum:Int = 0
+for term in allTerms {
+sum += term
+}
+return sum
 }
 
 ```
@@ -49,10 +53,14 @@ Now let's try using technics for summing an arithmetic sequence to achive `O(1)`
 A swift implementation for arithmetic sum using Gauss's technic is as follows.
       
 ```swift
-public func computeSumOfNaturalNumbersUsingGaussApproach(firstTerm a1: Int, nthTerm n: Int, commonDifference d: Int) -> Int {
-   // Sn = n/2 (2A1 + (n - 1)d)
-    let sum =  (2 * a1 + (n - 1) * d) *  n / 2
-    return sum
+public func computeSumOfNaturalNumbersUsingGaussApproach(
+firstTerm a1: Int,
+ nthTerm n: Int,
+  commonDifference d: Int
+) -> Int {
+// Sn = n/2 (2A1 + (n - 1)d)
+let sum =  (2 * a1 + (n - 1) * d) *  n / 2
+return sum
 }
 ```
 
