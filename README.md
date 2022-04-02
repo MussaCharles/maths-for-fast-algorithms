@@ -28,32 +28,17 @@ This approach will given us `O(n)` run time.
 Swift sample code for this approach is as follows: 
 
 ```swift
-/// Iteratively Computes and return the sum of natural numbers from the given first term to the last term by incrementing a given common difference.
-///
-/// Time complexity: O(n)
-///
-/// - Parameters:
-///   - A1:The first term of the series.
-///   - n: Position of the last term `(nth Term)` in a given series.
-///   - d: A constant difference between two consecutive terms.
-/// - Returns: Total sum from the first to the last term.
 public func computeSumOfNaturalNumbersUsingNaiveApproach(firstTerm A1: Int, nthTerm n: Int, commonDifference d: Int) -> Int {
-    // Space complexity O(n), n = total terms
     var allTerms: [Int] = []
-
     var currentTerm: Int = A1
-    // First creates all terms. Space complexity -> O(n)
     for _ in 1...n {
         allTerms.append(currentTerm)
         currentTerm += d
     }
-
- // Then compute the sum iteratively. Time complexity O(n), where n = count of all terms.
     var sum:Int = 0
     for term in allTerms {
         sum += term
     }
-
     return sum
 }
 
@@ -64,20 +49,8 @@ Now let's try using technics for summing an arithmetic sequence to achive `O(1)`
 A swift implementation for arithmetic sum using Gauss's technic is as follows.
       
 ```swift
-/// Uses Gauss's Approach to sum the numbers
-///
-/// `Time Complexity` => O(1)
-///
-/// - Parameters:
-///   - a1: The first term of the series
-///   - n: Position of the last term `(nth Term)` in a given series.
-///   - d: A constant difference between two consecutive terms.
-/// - Returns: Total sum from the first to the last term.
 public func computeSumOfNaturalNumbersUsingGaussApproach(firstTerm a1: Int, nthTerm n: Int, commonDifference d: Int) -> Int {
    // Sn = n/2 (2A1 + (n - 1)d)
-    // ⚠️: A division have to happen after everything else,
-    // Notice that I intentionally put n / 2 at the last portion of the computation
-    // Putting it at the beginning will give wrong answer due to Swift Numeric's integer propertis.
     let sum =  (2 * a1 + (n - 1) * d) *  n / 2
     return sum
 }
