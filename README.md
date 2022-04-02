@@ -1,10 +1,11 @@
 # maths-for-fast-algorithms
-A summary and list of resources covering maths concepts which can be very useful to achieve high performance algorithms. 
+A summary and list of resources covering maths concepts which every software Engineer needs to know in order to write high performance code/algorithms backed with Unit Tests.
 
 ## Arithmetic Sequence & Geometric Sequence
 ### Arithmetic Sequence
-Arithmetic Sequence is a sequence of numbers having a common difference. For example
-*100,200,300......n*
+Arithmetic Sequence is a sequence of numbers having a common/constant difference.
+ For example
+*100,200,300......n* has a common difference of 100
 
 By using [technics for summing an arithmetic sequence](https://en.wikipedia.org/wiki/Arithmetic_progression#:~:text=An%20alternate%20form%20results%20from%20re%2Dinserting%20the%20substitution%3A,%3A) **(Sn)** all we need to know is the first term **(Ao)** and the common difference**(d)**.
 
