@@ -6,7 +6,8 @@ Detailed explanations and implementations of various maths concepts which can he
 Arithmetic Sequence is a sequence of numbers having a common/constant difference.
 
  For example
-*100,200,300......n* has a common difference of 100
+ 
+`100,200,300......n` has a common difference of 100
 
 By using [technics for summing an arithmetic sequence](https://en.wikipedia.org/wiki/Arithmetic_progression#:~:text=An%20alternate%20form%20results%20from%20re%2Dinserting%20the%20substitution%3A,%3A) **(Sn)** 
 all we need to know is the first term **(Ao)** and the common difference **(d)**.
@@ -43,7 +44,7 @@ sum = 1_000_000 / 2 * (2 * 1 + (1_000_000 - 1) * 1)
 ```
 
 Performance Tests
-Note: Code snippet for this section can be run using Swift Playgrounds. You can find the source code [here](/blob/main/ArithmeticSequence.playground/Contents.swift)
+Note: Code snippet for this section can be run using Swift Playgrounds. You can find the source code [here](./blob/main/ArithmeticSequence.playground/Contents.swift)
 
   Enough talking let's test the performance of the above two implementations with varying different data sets. 
   We will try to increase the nth term and compare the run times.
