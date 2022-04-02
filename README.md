@@ -21,12 +21,11 @@ Consider a list of natural numbers below: -
 `1,2,3,4,......................................1,000,000`
 
 Using the naive approach to find the sum of the numbers would be to iterate through all numbers and add them one by one.
-
 Here is an example of swift code for the naive approach.
 
 This approach will given us `O(n)` run time. 
 
-Swift sample code for this approach is as follows: 
+### Naive approach Swift sample code, O(n) 
 
 ```swift
 public func computeSumOfNaturalNumbersUsingNaiveApproach(firstTerm A1: Int, nthTerm n: Int, commonDifference d: Int) -> Int {
@@ -45,6 +44,8 @@ public func computeSumOfNaturalNumbersUsingNaiveApproach(firstTerm A1: Int, nthT
 
 ```
 
+### Gauss's Arithmetic Series sum, O(1)
+
 Now let's try using technics for summing an arithmetic sequence to achive `O(1)` time complexity for summing a huge amount of numbers.
 
 A swift implementation for arithmetic sum using Gauss's technic is as follows.
@@ -57,15 +58,15 @@ public func computeSumOfNaturalNumbersUsingGaussApproach(firstTerm a1: Int, nthT
 }
 ```
 
-Unit tests to verify our implementation details
+### Unit tests to verify our implementation details
 
 Note: Code snippet for this section can be run using Swift Playgrounds.
 
 You can find the source code [here](ArithmeticSequence.playground)
 
-Enough talking show me some unit tests already 😖!
-  
-Sure, let's write some unit tests for the above two implementations with different data sets, starting from small amount of data to a very large amount.
+
+ 
+Let's write some unit tests for the above two implementations with different data sets, starting from small amount of data to a very large amount.
 We will try to increase the nth term and see if our functions give use expected output. 
   
   ```swift
@@ -241,6 +242,8 @@ Interpretations of the console output
 - Note that the time stemps printed on console above, it is not safe to use them as a measure of performance because other tasks are being done by Xcode such as cleaning up the tests before running each test etc.. So  we are going to write better tests just for verifying the performance in the next section.
 
 
+
+### Performance Tests
 Now let's write tests specifically for measuring performance of individual functions regardless of the IDE background tasks. This will give us more correct results to verify our hypothesis. 
 
 ```swift
