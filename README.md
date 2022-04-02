@@ -1,19 +1,19 @@
-# maths-for-fast-algorithms
-Detailed explanations and implementations of various maths concepts which can help software Engineers write high performance code/algorithms backed with Unit Tests.
+# Maths for fast algorithms
+Detailed explanations and implementations of various maths concepts which can help software Engineers write high performance code/algorithms backed with Unit tests.
 
-Note: This repo is a work in progress, [contributions](docs/CONTRIBUTING.md) are highly appreciated. 
+**Note:** This repo is a work in progress, [contributions](docs/CONTRIBUTING.md) are highly appreciated. 
 
 ## Arithmetic Sequence (Arithmetic Progression)
 Arithmetic Sequence is a sequence of numbers having a common/constant difference.
 
  For example
  
-`100,200,300......n` has a common difference of 100
+`100,200,300......n` has a common difference of `100`
 
-By using [technics for summing an arithmetic sequence](https://en.wikipedia.org/wiki/Arithmetic_progression#:~:text=An%20alternate%20form%20results%20from%20re%2Dinserting%20the%20substitution%3A,%3A) **(Sn)** 
-all we need to know is the first term **(Ao)** and the common difference **(d)**.
+By using [technics for summing an arithmetic sequence](https://en.wikipedia.org/wiki/Arithmetic_progression#:~:text=An%20alternate%20form%20results%20from%20re%2Dinserting%20the%20substitution%3A,%3A) `(Sn)`
+all we need to know is the first term `(A1)` and the common difference `(d)`.
 
-`Sn= n/2[2Ao + (n-1)d]`
+`Sn= n/2[2A1 + (n-1)d]`
 
 for Example: 
 Consider a list of natural numbers below: - 
@@ -25,7 +25,7 @@ Here is an example of swift code for the naive approach.
 
 This approach will given us `O(n)` run time. 
 
-### Naive approach Swift sample code, O(n) 
+### Naive approach Swift sample code, `O(n)`
 
 ```swift
 public func computeSumOfNaturalNumbersUsingNaiveApproach(firstTerm A1: Int, nthTerm n: Int, commonDifference d: Int) -> Int {
@@ -44,7 +44,7 @@ public func computeSumOfNaturalNumbersUsingNaiveApproach(firstTerm A1: Int, nthT
 
 ```
 
-### Gauss's Arithmetic Series sum, O(1)
+### Gauss's Arithmetic Series sum, `O(1)`
 
 Now let's try using technics for summing an arithmetic sequence to achive `O(1)` time complexity for summing a huge amount of numbers.
 
@@ -60,12 +60,9 @@ public func computeSumOfNaturalNumbersUsingGaussApproach(firstTerm a1: Int, nthT
 
 ### Unit tests to verify our implementation details
 
-Note: Code snippet for this section can be run using Swift Playgrounds.
-
-You can find the source code [here](ArithmeticSequence.playground)
+**Note:** Code snippet for this section can be run using Swift Playgrounds.You can find the source code [here.](ArithmeticSequence.playground)
 
 
- 
 Let's write some unit tests for the above two implementations with different data sets, starting from small amount of data to a very large amount.
 We will try to increase the nth term and see if our functions give use expected output. 
   
@@ -245,6 +242,9 @@ Interpretations of the console output
 
 ### Performance Tests
 Now let's write tests specifically for measuring performance of individual functions regardless of the IDE background tasks. This will give us more correct results to verify our hypothesis. 
+
+**Note:** Code snippet for this section too can be run using Swift Playgrounds.
+You can find the source code [here.](ArithmeticSequence.playground)
 
 ```swift
 import Foundation
