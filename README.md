@@ -49,7 +49,41 @@ Note: Code snippet for this section can be run using Swift Playgrounds. You can 
   Enough talking let's test the performance of the above two implementations with varying different data sets. 
   We will try to increase the nth term and compare the run times.
   
-  // TODO: - Write tests
+  ```swift
+import Foundation
+import XCTest
+
+final class ArithmeticSequenceTests: XCTestCase {
+    // MARK: -  Naive Approach
+    func sumNaiveApproach(from firstTerm: Int, to nthTerm: Int, commonDifference: Int) -> Int {
+        var sum:Int = 0
+        for i in firstTerm...nthTerm {
+            sum += i
+        }
+        return sum
+    }
+    
+    // MARK: - Using Gauss Arithmetic Sum
+    func sumGaussApproach(fromFirstTerm a1: Int, toNthTerm n: Int, commonDifference d: Int) -> Int {
+        let sum = n / 2 * (2 * a1 + (n - 1) * d)
+        return sum
+    }
+    
+    // MARK: - Tests
+    
+    func testNaiveApproachSum() {
+        
+    }
+    
+    
+    func testGaussAproachSum() {
+        
+    }
+    
+    
+}
+  
+  ```
       
 
 
