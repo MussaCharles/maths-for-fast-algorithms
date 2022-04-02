@@ -1,5 +1,5 @@
 # maths-for-fast-algorithms
-Detailed explanations and implementations of various maths concepts which can help Software Engineers to write high performance code/algorithms backed with Unit Tests.
+Detailed explanations and implementations of various maths concepts which can help software Engineers write high performance code/algorithms backed with Unit Tests.
 
 ## Arithmetic Sequence & Geometric Sequence
 ### Arithmetic Sequence (Arithmetic Progression)
