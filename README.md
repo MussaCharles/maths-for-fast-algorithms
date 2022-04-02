@@ -4,6 +4,7 @@ A summary and list of resources covering maths concepts which every software Eng
 ## Arithmetic Sequence & Geometric Sequence
 ### Arithmetic Sequence
 Arithmetic Sequence is a sequence of numbers having a common/constant difference.
+
  For example
 *100,200,300......n* has a common difference of 100
 
