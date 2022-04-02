@@ -57,18 +57,16 @@ public func computeSumOfNaturalNumbersUsingGaussApproach(firstTerm a1: Int, nthT
 }
 ```
 
-Performance Tests
+Unit tests to verify our implementation details
 
 Note: Code snippet for this section can be run using Swift Playgrounds.
-
-On this sample I am using Unit Tests non only to test that implementations gives correct results but also to check the time it takes to run the piece of code (run time).
 
 You can find the source code [here](ArithmeticSequence.playground)
 
 Enough talking show me some unit tests already 😖!
   
-Sure, let's test the performance of the above two implementations with different data sets, starting from small amount of data to a very large amount.
-We will try to increase the nth term and compare the run times of each implemantation. 
+Sure, let's write some unit tests for the above two implementations with different data sets, starting from small amount of data to a very large amount.
+We will try to increase the nth term and see if our functions give use expected output. 
   
   ```swift
 import Foundation
@@ -237,10 +235,14 @@ ArithmeticSequenceTests.defaultTestSuite.run()
  */
   
   ```
-      
-      
+  
+Interpretations of the console output
+-  The ouput above is for the implementation details of our algorithms, All tests passed so we can rest assured that our algorithms will give us correct results for any data sets. 
+- Note that the time stemps printed on console above, it is not safe to use them as a measure of performance because other tasks are being done by Xcode such as cleaning up the tests before running each test etc.. So  we are going to write better tests just for verifying the performance in the next section.
 
-Alternatively we can write tests specifically for measuring performance. This will give us more details. I am adding this as an optional reading section because there is no much difference compared to the above approach. 
+
+Now let's write tests specifically for measuring performance of individual functions regardless of the IDE background tasks. This will give us more correct results to verify our hypothesis. 
+
 ```swift
 import Foundation
 import XCTest
@@ -342,8 +344,16 @@ public final class ArithmeticSequenceSpeedMeasurementsTests: XCTestCase {
 
 
 ```
-      
-      
+
+Demistifying Console Outputs
+- Naive sum performance results.
+  - `test_A_NaiveSumSpeedForSmallDataSets` took 0.266 seconds. 
+  - `test_B_NaiveSumSpeedForLargeDataSets` took 0.782 seconds (Almost 3 times the small data sets) ->` O(n)` runtime.
+ 
+- Gauss Arithmetic sum performance results. 
+  - `test_C_GaussSpeedForSmallDataSets` took 0.253 seconds.
+  - `test_D_GaussSumSpeedForLargeDataSets` Surprisingly  took 0.252 seconds which is the almost exactly similar ( `O(1)` run time) to the method for small data sets above.
+
       
       
 ## Contributing
