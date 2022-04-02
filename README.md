@@ -1,6 +1,8 @@
 # maths-for-fast-algorithms
 Detailed explanations and implementations of various maths concepts which can help software Engineers write high performance code/algorithms backed with Unit Tests.
 
+Note: This repo is a work in progress, [contributions](CONTRIBUTING.md) are highly appreciated. 
+
 ## Arithmetic Sequence (Arithmetic Progression)
 Arithmetic Sequence is a sequence of numbers having a common/constant difference.
 
@@ -342,4 +344,10 @@ public final class ArithmeticSequenceSpeedMeasurementsTests: XCTestCase {
 ```
       
       
+
+## Whats next?
+  *That's it for now more contents coming soon, Work in progress.... 👨‍💻*
+      
+## Contributing
+I welcome any contributions which involves usage of maths theorem/formulas to achieve high performance algorithms. Please see the [CONTRIBUTING](CONTRIBUTING.md) for how to get involved.
     
