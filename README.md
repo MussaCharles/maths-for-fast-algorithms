@@ -44,7 +44,7 @@ sum = 1_000_000 / 2 * (2 * 1 + (1_000_000 - 1) * 1)
 ```
 
 Performance Tests
-Note: Code snippet for this section can be run using Swift Playgrounds. You can find the source code [here](./blob/main/ArithmeticSequence.playground/Contents.swift)
+Note: Code snippet for this section can be run using Swift Playgrounds. You can find the source code [here](ArithmeticSequence.playground)
 
   Enough talking let's test the performance of the above two implementations with varying different data sets. 
   We will try to increase the nth term and compare the run times.
