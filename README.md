@@ -68,6 +68,8 @@ Enough talking show me some unit tests already 😖!
   
 Sure, let's test the performance of the above two implementations with different data sets, starting from small amount of data to a very large amount.
 We will try to increase the nth term and compare the run times of each implemantation. 
+
+The sample code for this section is extracted from [ArithmeticSequenceImplementationTests](ArithmeticSequenceImplementationTests) file found in the project folder.
   
   ```swift
 import Foundation
