@@ -1,8 +1,8 @@
 # maths-for-fast-algorithms
-A summary and list of resources covering maths concepts which every software Engineer needs to know in order to write high performance code/algorithms backed with Unit Tests.
+Detailed explanations and implementations of various maths concepts which can help Software Engineers to write high performance code/algorithms backed with Unit Tests.
 
 ## Arithmetic Sequence & Geometric Sequence
-### Arithmetic Sequence
+### Arithmetic Sequence (Arithmetic Progression)
 Arithmetic Sequence is a sequence of numbers having a common/constant difference.
 
  For example
@@ -22,7 +22,7 @@ Using the naive approach to find the sum of the numbers would be to iterate thro
 
 Here is an example of swift code for the naive approach.
 
-That approach will given us O(n) run time. 
+This approach will given us `O(n)` run time. 
 
 Swift sample code for this approach is as follows: 
 
@@ -33,7 +33,7 @@ for i in 1...1_000_000 {
 }
 ```
 
-Using technics for summing an arithmetic sequence we can achive **O(1)** time complexity for summing a huge amount of numbers.
+Now let's try using technics for summing an arithmetic sequence to achive `O(1)` time complexity for summing a huge amount of numbers.
 
 A swift implementation for summing from 1 to Million using Gauss's technic is as follows.
       
@@ -41,10 +41,13 @@ A swift implementation for summing from 1 to Million using Gauss's technic is as
 // Sn= n/2[2Ao + (n-1)d]
 sum = 1_000_000 / 2 * (2 * 1 + (1_000_000 - 1) * 1)
 ```
-      
 
 Performance Tests
-  Enough talking let's test the performance of the above two implementations using huge numbers.
+Note: Code snippet for this section can be run using Swift Playgrounds. You can find the source code [here](/blob/main/ArithmeticSequence.playground/Contents.swift)
+
+  Enough talking let's test the performance of the above two implementations with varying different data sets. 
+  We will try to increase the nth term and compare the run times.
+  
   // TODO: - Write tests
       
 
