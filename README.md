@@ -347,5 +347,6 @@ public final class ArithmeticSequenceSpeedMeasurementsTests: XCTestCase {
       
       
 ## Contributing
-I welcome any contributions which involves usage of maths theorem/formulas to achieve high performance algorithms. Please see the [CONTRIBUTING](docs/CONTRIBUTING.md) for how to get involved.
+This is a work in progress so, I welcome any contributions which involves usage of maths theorem/formulas to achieve high performance algorithms. 
+Please see the [CONTRIBUTING](docs/CONTRIBUTING.md) for how to get involved.
     
