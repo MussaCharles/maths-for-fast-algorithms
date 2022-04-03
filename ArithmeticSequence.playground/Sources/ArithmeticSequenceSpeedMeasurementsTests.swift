@@ -1,6 +1,8 @@
 import Foundation
 import XCTest
 
+/// Speed measurement tests to verify the run time of both Gauss and Naive implementations.
+
 public final class ArithmeticSequenceSpeedMeasurementsTests: XCTestCase {
 
     func test_A_NaiveSumSpeedForSmallDataSets() {
