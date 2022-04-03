@@ -28,18 +28,26 @@ This approach will given us `O(n)` run time.
 ### Naive approach Swift sample code, `O(n)`
 
 ```swift
-public func computeSumOfNaturalNumbersUsingNaiveApproach(firstTerm A1: Int, nthTerm n: Int, commonDifference d: Int) -> Int {
-    var allTerms: [Int] = []
-    var currentTerm: Int = A1
-    for _ in 1...n {
-        allTerms.append(currentTerm)
-        currentTerm += d
+import Foundation
+
+public struct NaiveSum {
+
+    public func compute(firstTerm A1: Int, nthTerm n: Int, commonDifference d: Int) -> Int {
+        var allTerms: [Int] = []
+        var currentTerm: Int = A1
+        for _ in 1...n {
+            allTerms.append(currentTerm)
+            currentTerm += d
+        }
+
+        var sum:Int = 0
+        for term in allTerms {
+            sum += term
+        }
+        
+        return sum
     }
-    var sum:Int = 0
-    for term in allTerms {
-        sum += term
-    }
-    return sum
+
 }
 
 ```
@@ -51,11 +59,18 @@ Now let's try using technics for summing an arithmetic sequence to achive `O(1)`
 A swift implementation for arithmetic sum using Gauss's technic is as follows.
       
 ```swift
-public func computeSumOfNaturalNumbersUsingGaussApproach(firstTerm a1: Int, nthTerm n: Int, commonDifference d: Int) -> Int {
-   // Sn = n/2 (2A1 + (n - 1)d)
-    let sum =  (2 * a1 + (n - 1) * d) *  n / 2
-    return sum
+import Foundation
+
+public struct GaussSum {
+
+    public func compute(firstTerm a1: Int, nthTerm n: Int, commonDifference d: Int) -> Int {
+       // Sn = n/2 (2A1 + (n - 1)d)
+        let sum =  (2 * a1 + (n - 1) * d) *  n / 2
+        return sum
+    }
+
 }
+
 ```
 
 ### Unit tests to verify our implementation details
@@ -67,56 +82,35 @@ Let's write some unit tests for the above two implementations with different dat
 We will try to increase the nth term and see if our functions give use expected output. 
   
   ```swift
-import Foundation
-import XCTest
+public final class ArithmeticSequenceImplementationTests: XCTestCase {
 
+    // MARk: - Properties
+    public var naiveSum: NaiveSum!
+    public var gaussSum: GaussSum!
 
-final class ArithmeticSequenceImplementationTests: XCTestCase {
-
-    var conditionToSumFromOneToFiveWithDifferenceOfTwo: SumConditions!
-    var conditionToSumFromOneTo100WithDifferenceOfOne: SumConditions!
-    var conditionToSumFromTenToFiftyThousandWithDifferenceOf15: SumConditions!
-
-    override func setUp() {
+    // MARK: - Life Cycle
+    public override func setUp() {
         super.setUp()
-        conditionToSumFromOneToFiveWithDifferenceOfTwo = SumConditions(
-            firstTerm: 1,
-            nthTerm: 5,
-            commonDifference: 2
-        )
-
-        conditionToSumFromOneTo100WithDifferenceOfOne = SumConditions(
-            firstTerm: 1,
-            nthTerm: 100,
-            commonDifference: 1
-        )
-
-        conditionToSumFromTenToFiftyThousandWithDifferenceOf15 = SumConditions(
-            firstTerm: 10,
-            nthTerm: 50_000,
-            commonDifference: 15
-        )
+        naiveSum = NaiveSum()
+        gaussSum = GaussSum()
     }
 
-    override func tearDown() {
-        conditionToSumFromOneTo100WithDifferenceOfOne = nil
-        conditionToSumFromOneToFiveWithDifferenceOfTwo = nil
+    public override func tearDown() {
+        gaussSum = nil
+        naiveSum = nil
         super.tearDown()
     }
 
-    // MARK: - Tests
+    // Note: - I prefixed the tests with letters A,B,C... etc.. because Xcode run tests in alphabetic order by default,
+    // So prefixing them makes it easy to debug time complexity of each test.
 
-    // Note: - I prefixed the tests with letters A,B,C... etc.. because Xcode run tests in alphabetic order by default, So prefixing them makes it easy to debug time complexity of each test.
-
+    // MARK: - Naive Tests
     func test_A_NaiveApproachSumTo5GivesCorrectAnswer() {
-        // Given
-        let givenSumTo5Condition = conditionToSumFromOneToFiveWithDifferenceOfTwo!
-
         // When
-        let sumToFithTerm = computeSumOfNaturalNumbersUsingNaiveApproach(
-            firstTerm: givenSumTo5Condition.firstTerm,
-            nthTerm: givenSumTo5Condition.nthTerm,
-            commonDifference: givenSumTo5Condition.commonDifference
+        let sumToFithTerm = naiveSum.compute(
+            firstTerm: 1,
+            nthTerm: 5,
+            commonDifference: 2
         )
 
         // Then
@@ -124,77 +118,58 @@ final class ArithmeticSequenceImplementationTests: XCTestCase {
     }
 
     func test_B_NaiveApproachSumTo100GivesCorrectAnswer() {
-        // Given
-        let givenSumTo100Conditions = conditionToSumFromOneTo100WithDifferenceOfOne!
-
         // When
-        let sumToOneHundred = computeSumOfNaturalNumbersUsingNaiveApproach(
-            firstTerm: givenSumTo100Conditions.firstTerm,
-            nthTerm: givenSumTo100Conditions.nthTerm,
-            commonDifference: givenSumTo100Conditions.commonDifference
+        let sumToOneHundred = naiveSum.compute(
+            firstTerm: 1,
+            nthTerm: 100,
+            commonDifference: 1
         )
 
         // Then
         XCTAssertEqual(sumToOneHundred, 5050)
     }
 
-
     func test_C_NaiveApproachSumTo_50000_GivesCorrectAnswer() {
-        // Given
-        let givenSumTo100Conditions = conditionToSumFromTenToFiftyThousandWithDifferenceOf15!
-
         // When
-        let sumToOneHundred = computeSumOfNaturalNumbersUsingNaiveApproach(
-            firstTerm: givenSumTo100Conditions.firstTerm,
-            nthTerm: givenSumTo100Conditions.nthTerm,
-            commonDifference: givenSumTo100Conditions.commonDifference
+        let sumToOneHundred = naiveSum.compute(
+            firstTerm: 10,
+            nthTerm: 50_000,
+            commonDifference: 15
         )
-
         // Then
         XCTAssertEqual(sumToOneHundred, 18750125000)
     }
 
-
-
+    // MARK: - Gauss Tests
 
     func test_D_GaussAproachSumTo5GivesCorrectAnswer() {
-        // Given
-        let givenSumTo5Condition = conditionToSumFromOneToFiveWithDifferenceOfTwo!
-
         // When
-        let sumToFithTerm = computeSumOfNaturalNumbersUsingGaussApproach(
-            firstTerm: givenSumTo5Condition.firstTerm,
-            nthTerm: givenSumTo5Condition.nthTerm,
-            commonDifference: givenSumTo5Condition.commonDifference
+        let sumToFithTerm = gaussSum.compute(
+            firstTerm: 1,
+            nthTerm: 5,
+            commonDifference: 2
         )
-
         // Then
         XCTAssertEqual(sumToFithTerm, 25)
     }
 
     func test_E_GaussAproachSumTo100GivesCorrectAnswer()  {
-        // Given
-        let givenCondition = conditionToSumFromOneTo100WithDifferenceOfOne!
         // When
-        let sum = computeSumOfNaturalNumbersUsingGaussApproach(
-            firstTerm: givenCondition.firstTerm,
-            nthTerm: givenCondition.nthTerm,
-            commonDifference: givenCondition.commonDifference
+        let sum = gaussSum.compute(
+            firstTerm: 1,
+            nthTerm: 100,
+            commonDifference: 1
         )
-
         // Then
         XCTAssertEqual(sum, 5050)
     }
 
     func test_F_GaussAproachSumTo_50000_GivesCorrectAnswer() {
-        // Given
-        let givenSumTo100Conditions = conditionToSumFromTenToFiftyThousandWithDifferenceOf15!
-
         // When
-        let sumToOneHundred = computeSumOfNaturalNumbersUsingGaussApproach(
-            firstTerm: givenSumTo100Conditions.firstTerm,
-            nthTerm: givenSumTo100Conditions.nthTerm,
-            commonDifference: givenSumTo100Conditions.commonDifference
+        let sumToOneHundred = gaussSum.compute(
+            firstTerm: 10,
+            nthTerm: 50_000,
+            commonDifference: 15
         )
 
         // Then
@@ -203,8 +178,14 @@ final class ArithmeticSequenceImplementationTests: XCTestCase {
 
 }
 
-
-
+  ```
+  
+  ### Running Implemnentation Tests
+  In the sources folder there is a playground file named ArithmeticSequence. All tests are triggered in that file as follows. 
+  ```swift
+import Foundation
+import XCTest
+  
 let testObserver = TestObserver()
 XCTestObservationCenter.shared.addTestObserver(testObserver)
 ArithmeticSequenceTests.defaultTestSuite.run()
@@ -228,11 +209,9 @@ ArithmeticSequenceTests.defaultTestSuite.run()
  Test Case '-[__lldb_expr_23.ArithmeticSequenceTests test_F_GaussAproachSumTo_50000_GivesCorrectAnswer]' passed (0.001 seconds).
  Test Suite 'ArithmeticSequenceTests' passed at 2022-04-03 01:45:51.907.
       Executed 6 tests, with 0 failures (0 unexpected) in 0.099 (0.116) seconds
-
-
  */
-  
   ```
+  
   
 Interpretations of the console output
 -  The ouput above is for the implementation details of our algorithms, All tests passed so we can rest assured that our algorithms will give us correct results for any data sets. 
@@ -268,8 +247,6 @@ public final class ArithmeticSequenceSpeedMeasurementsTests: XCTestCase {
         }
     }
 
-
-
     func test_B_NaiveSumSpeedForLargeDataSets() {
         measureMetrics(
             [.wallClockTime],
@@ -302,8 +279,6 @@ public final class ArithmeticSequenceSpeedMeasurementsTests: XCTestCase {
         }
     }
 
-
-
     func test_D_GaussSumSpeedForLargeDataSets() {
         measureMetrics(
             [.wallClockTime],
@@ -320,10 +295,20 @@ public final class ArithmeticSequenceSpeedMeasurementsTests: XCTestCase {
         }
     }
 
-
 }
 
+```
 
+ ### Running Performance measurement Tests
+  Similar to implementation tests above tests for this section can also be triggered from the ArithmeticSequence playground included in Sources folder as follows.
+  ```swift
+  import Foundation
+import XCTest
+  
+let testObserver = TestObserver()
+XCTestObservationCenter.shared.addTestObserver(testObserver)
+ArithmeticSequenceSpeedMeasurementsTests.defaultTestSuite.run()
+  
 // MARK: - Sample Output
 /*
 
@@ -342,11 +327,9 @@ public final class ArithmeticSequenceSpeedMeasurementsTests: XCTestCase {
  Test Case '-[ArithmeticSequence_Sources.ArithmeticSequenceSpeedMeasurementsTests test_D_GaussSumSpeedForLargeDataSets]' passed (0.252 seconds).
  Test Suite 'ArithmeticSequenceSpeedMeasurementsTests' passed at 2022-04-03 03:31:02.273.
       Executed 4 tests, with 0 failures (0 unexpected) in 1.552 (1.567) seconds
-
  */
 
-
-```
+  ```
 
 Demistifying Console Outputs
 - Naive sum performance results.
