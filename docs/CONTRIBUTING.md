@@ -3,7 +3,7 @@ Well, no body is perfect so any contributions are welcome.
 
 I started this repo so that to have a place to refer to when having certain memory hungry tasks such as working with computations which require huge amount of data.
 Furthermore, Since maths have lots of proven threorems & formulas, I think we can take advantage of such knowledge to write high performance code so I welcome 
-contributions which will help us learn more about those great theoreams and see if we can apply to our daily Software Engineering jobs. 
+contributions which will help us learn more about those great theorems and see if we can apply to our daily Software Engineering jobs. 
 
 This is the very beginning of the project and I will be adding more contents during my free time after work or on weekends, so I am really looking forward
 to your contributions, feel free to submit a PR. 
