@@ -356,6 +356,11 @@ Demistifying Console Outputs
   - `test_C_GaussSpeedForSmallDataSets` took 0.253 seconds.
   - `test_D_GaussSumSpeedForLargeDataSets` Surprisingly  took 0.252 seconds which is the almost exactly similar ( `O(1)` run time) to the method for small data sets above.
 
+## Other useful formulas related to Arithmetic Progression
+- Sum of Natural Numbers (S<sub>n</sub>) => n/2(n+1)
+- Sum of Square Series (S<sub>n<sup>2</sup></sub>) =>  n/6(n+1)(2n+1)
+- Sum of Cubic Series (S<sub>n<sup>3</sup></sub>) => (n/2(n+1))<sup>2</sup>
+
 ## Suggested Learning Materials
 
 If you are new to Arithmetic Progression (AP) or you just need to review the concepts, I recommend the following materials. 
