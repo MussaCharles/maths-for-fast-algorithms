@@ -340,7 +340,10 @@ Demistifying Console Outputs
   - `test_C_GaussSpeedForSmallDataSets` took 0.253 seconds.
   - `test_D_GaussSumSpeedForLargeDataSets` Surprisingly  took 0.252 seconds which is the almost exactly similar ( `O(1)` run time) to the method for small data sets above.
 
-      
+## Suggested Learning Materials
+If you are new to Arithmetic Progression (AP) or you just need to review the concepts, I recommend the following materials. 
+- [Youtube - Arithmetic Sequences and Arithmetic Series - Basic Introduction](https://www.youtube.com/watch?v=XZJdyPkCxuE&t=1016s&ab_channel=TheOrganicChemistryTutor)
+- [Wikipedia - Arithmetic progression](https://en.wikipedia.org/wiki/Arithmetic_progression#:~:text=An%20alternate%20form%20results%20from%20re%2Dinserting%20the%20substitution%3A,%3A)
       
 ## Contributing
 This is a work in progress so, I welcome any contributions which involves usage of maths theorem/formulas to achieve high performance algorithms. 
