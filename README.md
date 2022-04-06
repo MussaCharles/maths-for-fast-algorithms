@@ -3,19 +3,35 @@ Detailed explanations and implementations of various maths concepts which can he
 
 **Note:** This repo is a work in progress, [contributions](docs/CONTRIBUTING.md) are highly appreciated. 
 
-## Arithmetic Sequence (Arithmetic Progression)
+## Arithmetic Sequence /Arithmetic Progression(AP)
+
+## Theory
 Arithmetic Sequence is a sequence of numbers having a common/constant difference.
 
- For example
- 
-`100,200,300......n` has a common difference of `100`
+ For example `1,2,3......n` has a common difference (d) of `1`
 
-By using [technics for summing an arithmetic sequence](https://en.wikipedia.org/wiki/Arithmetic_progression#:~:text=An%20alternate%20form%20results%20from%20re%2Dinserting%20the%20substitution%3A,%3A) `(Sn)`
-all we need to know is the first term `(A1)` and the common difference `(d)`.
+By using Gauss's technic for summing an arithmetic sequence all we need to know is the first term (A<sub>1</sub>) and the common difference (d) Or just the first term, n<sup>th</sup> term and the total number of terms (n).
 
-`Sn= n/2[2A1 + (n-1)d]`
+In AP the nth term can be calculated as follows: - 
 
-for Example: 
+ `An = A1 + (n-1)d`
+
+Thus using that we can have two ways of computing the sum fo the sequence, also known as Arithmetic Series (S<sub>n</sub>) as follows: - 
+
+`Sn = n/2(A1 + An)`
+
+If we substitute the value of `An` we can also deduce a second formula as follows: - 
+
+  `Sn = n/2[A1 + A1 + (n-1)d]`
+
+Therefore
+
+  `Sn = n/2[2A1 + (n-1)d]`
+
+***Note:** For full derivations of the fomulas above see Suggested Learning Materials [Section.](#suggested-learning-materials)*
+
+## Code Samples & Complexity Analysis
+
 Consider a list of natural numbers below: - 
 
 `1,2,3,4,......................................1,000,000`
@@ -341,10 +357,13 @@ Demistifying Console Outputs
   - `test_D_GaussSumSpeedForLargeDataSets` Surprisingly  took 0.252 seconds which is the almost exactly similar ( `O(1)` run time) to the method for small data sets above.
 
 ## Suggested Learning Materials
+
 If you are new to Arithmetic Progression (AP) or you just need to review the concepts, I recommend the following materials. 
+- [Reading - Nth Term of an AP](https://byjus.com/maths/nth-term-of-an-ap/#:~:text=Nth%20term%20of%20an%20AP%2C%20an%20%3D%20a,%2B(n%2D1)d.)
+- [Reading - Sum of N Terms of AP And Arithmetic Progression](https://byjus.com/maths/sum-of-n-terms/)
 - [Youtube - Arithmetic Sequences and Arithmetic Series - Basic Introduction](https://www.youtube.com/watch?v=XZJdyPkCxuE&t=1016s&ab_channel=TheOrganicChemistryTutor)
 - [Wikipedia - Arithmetic progression](https://en.wikipedia.org/wiki/Arithmetic_progression#:~:text=An%20alternate%20form%20results%20from%20re%2Dinserting%20the%20substitution%3A,%3A)
-      
+
 ## Contributing
 This is a work in progress so, I welcome any contributions which involves usage of maths theorem/formulas to achieve high performance algorithms. 
 Please see the [CONTRIBUTING](docs/CONTRIBUTING.md) for how to get involved.
