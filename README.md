@@ -370,6 +370,14 @@ If you are new to Arithmetic Progression (AP) or you just need to review the con
 - [Wikipedia - Arithmetic progression](https://en.wikipedia.org/wiki/Arithmetic_progression#:~:text=An%20alternate%20form%20results%20from%20re%2Dinserting%20the%20substitution%3A,%3A)
 - [Big-O Cheat Sheet](https://www.bigocheatsheet.com/)
 
+
+## What Next? 
+There is no a strict requirement to what to add next but I have the following planned for the near future. 
+Feel free to contribute. 
+- Add Python sample projects. 
+- Add more real world examples. 
+- Add other useful maths concepts with code samples. 
+
 ## Contributing
 This is a work in progress so, I welcome any contributions which involves usage of maths theorem/formulas to achieve high performance algorithms. 
 Please see the [CONTRIBUTING](docs/CONTRIBUTING.md) for how to get involved.
