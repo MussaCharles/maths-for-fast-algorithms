@@ -68,6 +68,23 @@ public struct NaiveSum {
 
 ```
 
+Recursion example
+```swift
+/// Use recursion to sum `n` arithmetic terms.
+///
+/// - Time Complexity -> O(n)
+/// - Space Complexity -> O(n)
+/// - Parameter n: Number of terms.
+/// - Returns: The sum of the first n terms.
+func sum(_ n: Int) -> Int {
+    if n <= 0 {
+        return 0
+    }
+    return n + sum(n - 1)
+}
+```
+
+
 ### Gauss's Arithmetic Series sum, `O(1)`
 
 Now let's try using technics for summing an arithmetic sequence to achive `O(1)` time complexity for summing a huge amount of numbers.
