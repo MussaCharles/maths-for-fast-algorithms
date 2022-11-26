@@ -10,7 +10,7 @@ Arithmetic Sequence is a sequence of numbers having a common/constant difference
 
  For example `1,2,3......n` has a common difference (d) of `1`
 
-By using Gauss's technic for summing an arithmetic sequence all we need to know is the first term (A<sub>1</sub>) and the common difference (d) Or just the first term, n<sup>th</sup> term and the total number of terms (n).
+By using [Gauss's technic](https://en.wikipedia.org/wiki/Arithmetic_progression) for summing an arithmetic sequence all we need to know is the first term (A<sub>1</sub>) and the common difference (d) Or just the first term, n<sup>th</sup> term and the total number of terms (n).
 
 In AP the nth term can be calculated as follows: - 
 
